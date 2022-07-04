@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        const ROOM_ID = "<%= roomId %>"
+    </script>
+    <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Kfintech Customer Care</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #video-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 6%;
+        }
+
+        video {
+            width: 30%;
+            height: 45%;
+            border-radius: 5%;
+            object-fit: cover;
+            margin-right: 5%;
+            margin-bottom: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color:white;text-align: center;">Video Call Assist</h1>
+    <div id="video-grid"></div>
+    <div class="call-action-div">
+        <button id="micBtn" onclick="muteAudio()">🎙️ Mic On</button>
+        <button id="cameraBtn" onclick="muteVideo()">📷 Camera On</button>
+    </div>
+</body>
+
+</html>
